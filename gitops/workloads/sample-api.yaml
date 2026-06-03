@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-api
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/bilalwaheed24/gitops-platform
+    targetRevision: HEAD
+    path: k8s/apps/sample-api
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
