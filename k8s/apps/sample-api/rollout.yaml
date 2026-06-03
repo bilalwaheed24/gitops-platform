@@ -22,7 +22,7 @@ spec:
         - name: api
           image: hashicorp/http-echo:1.0
           args:
-            - "-text=Hello from GitOps Platform v1.0.0"
+            - "-text=Hello from GitOps Platform v2.0.0 — CANARY"
             - "-listen=:8080"
           ports:
             - containerPort: 8080
