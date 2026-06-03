@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/bilalwaheed24/gitops-platform
     targetRevision: HEAD
-    path: gitops
+    path: gitops/platform
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
