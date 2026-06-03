@@ -1,1 +1,1 @@
-# gitops-platform
+# GitOps Platform
